@@ -1,0 +1,66 @@
+@charset "utf-8";
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper {
+    min-width: 1000px;
+    margin: 0 auto;
+}
+
+header h1 {
+    text-align: center;
+    background: #d84544;
+    color: #ad3231;
+    padding: 180px 0 ;
+    font-size: 4.5em;
+    font-weight: bold  ;
+
+}
+
+nav {
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+li {
+    float: left;
+    width: 20%;
+}
+
+li a {
+    text-align:  center;
+    display: block;
+    text-decoration: none;
+    background: #ad3231;
+    padding: 25px 0;
+    color: #fff;
+    border-right: 1px solid #d84544;
+}
+li a:hover {
+    background: #98302f;
+}
+
+li:last-child a {
+    border-right: none;
+}
+
+main {
+    clear: both;
+    display: block;
+    padding: 50px 25px 20px;
+}
+
+
+section {
+    font-size: 3.5em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #d84544;
+}
+
+p {
+    margin-bottom: 50px;
+    line-height: 2em;
+    color: #4e2322;
+}

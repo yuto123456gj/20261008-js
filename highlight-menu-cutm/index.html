@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BASKETBALL GUIDE｜バスケットボール入門</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- jQuery本体 -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+
+    <header>
+        <h1>
+            <span class="logo-mark" aria-hidden="true"></span>
+            <span class="logo-text">BASKET<br>BALL</span>
+            <span class="logo-sub">入門ガイド</span>
+        </h1>
+
+        <nav>
+            <ul>
+                <li class="current"><a href="#sec01"><span class="num">01</span><span class="label">バスケとは<em>About</em></span></a></li>
+                <li><a href="#sec02"><span class="num">02</span><span class="label">基本ルール<em>Rules</em></span></a></li>
+                <li><a href="#sec03"><span class="num">03</span><span class="label">基本スキル<em>Skills</em></span></a></li>
+                <li><a href="#sec04"><span class="num">04</span><span class="label">コートと用具<em>Court &amp; Gear</em></span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="hero">
+            <img src="img/hero.jpg" alt="体育館で行われているバスケットボールの試合">
+            <div class="hero-body">
+                <p class="hero-eyebrow">Basketball for Beginners</p>
+                <h2 class="hero-title">はじめての<br>バスケットボール</h2>
+                <p class="hero-lead">ルールも、技術も、道具も。コートに立つまでに知っておきたいことを4つのセクションにまとめました。</p>
+            </div>
+        </div>
+
+        <section id="sec01">
+            <div class="sec-head">
+                <span class="sec-num">01</span>
+                <h2>バスケットボールとは</h2>
+                <p class="sec-en">About Basketball</p>
+            </div>
+
+            <p class="lead">5人対5人の2チームが、相手のゴールにボールを入れ合って得点を競うスポーツです。制限時間が終わった時点で、得点の多いチームが勝ちになります。</p>
+
+            <figure>
+                <img src="img/about.jpg" alt="ボールを運ぶ選手とそれを守るディフェンス">
+                <figcaption>攻撃と守備が数秒ごとに入れ替わる、展開の速い競技。</figcaption>
+            </figure>
+
+            <p>考案したのは、カナダ出身の体育教師ジェームズ・ネイスミス。1891年、冬のあいだ室内でできる運動を求められ、桃を入れる籠（basket）を体育館の手すりに取り付けたのが始まりとされています。「バスケット（籠）」と「ボール」という名前は、ここから来ています。</p>
+
+            <p>サッカーや野球に比べて1試合の得点が多く、1回の攻撃が終わるまでの時間も短いため、点差がめまぐるしく動きます。身長の高さが有利になる場面は多いものの、ドリブルや3ポイントシュートなど、背が低くても勝負できる役割がはっきり用意されているのも特徴です。</p>
+
+            <ul class="facts">
+                <li><strong>5</strong><span>コート上の人数（1チーム）</span></li>
+                <li><strong>1891</strong><span>考案された年</span></li>
+                <li><strong>213</strong><span>FIBA加盟の国と地域</span></li>
+            </ul>
+        </section>
+
+        <section id="sec02">
+            <div class="sec-head">
+                <span class="sec-num">02</span>
+                <h2>試合の基本ルール</h2>
+                <p class="sec-en">Basic Rules</p>
+            </div>
+
+            <p class="lead">覚えることは多く見えますが、まずは「得点」「時間」「反則」の3つを押さえれば試合を追えるようになります。</p>
+
+            <figure>
+                <img src="img/gear.jpg" alt="バスケットボールのリングとネットのクローズアップ">
+                <figcaption>このリングを通せば得点。高さは床から3.05m。</figcaption>
+            </figure>
+
+            <h3>得点の数え方</h3>
+            <p>どこからシュートを打ったかで点数が変わります。3ポイントラインの外側から決めれば3点、内側からなら2点、ファウルを受けた後に打つフリースローは1本につき1点です。</p>
+
+            <h3>試合時間</h3>
+            <p>FIBA（国際バスケットボール連盟）のルールでは10分×4クォーターの計40分。NBAは12分×4クォーターの計48分です。時計はボールが止まるたびに止まるので、実際の所要時間はこれより長くなります。</p>
+
+            <h3>時間に関する制限</h3>
+            <p>攻撃側がボールを持ち続けられないよう、細かい制限時間が決められています。</p>
+            <ul class="rules">
+                <li><span class="tag">24秒</span>ボールを保持してからシュートを打つまでの制限時間。</li>
+                <li><span class="tag">8秒</span>自陣から相手陣（フロントコート）へボールを運ぶまでの時間。</li>
+                <li><span class="tag">3秒</span>攻撃側が制限区域（ペイントエリア）に留まれる時間。</li>
+                <li><span class="tag">5秒</span>相手に密着された状態でボールを持ち続けられる時間。</li>
+            </ul>
+
+            <h3>代表的な反則</h3>
+            <p>ボールを持ったまま3歩以上歩く<strong>トラベリング</strong>、一度止めたドリブルを再開する<strong>ダブルドリブル</strong>、相手に不当に接触する<strong>ファウル</strong>。ファウルは1人5回（NBAは6回）で退場になります。</p>
+        </section>
+
+        <section id="sec03">
+            <div class="sec-head">
+                <span class="sec-num">03</span>
+                <h2>基本スキル</h2>
+                <p class="sec-en">Fundamental Skills</p>
+            </div>
+
+            <p class="lead">試合で使う技術は、突き詰めると「運ぶ・渡す・入れる・取る・止める」の5つに整理できます。</p>
+
+            <figure>
+                <img src="img/skill.jpg" alt="ドリブルでボールを運ぶバスケットボール選手">
+                <figcaption>ドリブルは視線を上げ、指の腹でボールを押し出すのが基本。</figcaption>
+            </figure>
+
+            <div class="skill-grid">
+                <div class="skill">
+                    <h3>ドリブル</h3>
+                    <p>手のひらではなく指の腹で押し出し、ボールは腰より低く。顔を上げてコート全体を見られるようになると、一気に視野が広がります。</p>
+                </div>
+                <div class="skill">
+                    <h3>パス</h3>
+                    <p>胸の前から真っすぐ投げるチェストパス、床で一度弾ませるバウンズパス、頭上から投げるオーバーヘッドパスが基本の3種類です。</p>
+                </div>
+                <div class="skill">
+                    <h3>シュート</h3>
+                    <p>走り込んでリング下で決めるレイアップ、跳びながら放つジャンプシュート、止まった状態で打つフリースロー。まずはレイアップから。</p>
+                </div>
+                <div class="skill">
+                    <h3>リバウンド</h3>
+                    <p>外れたシュートを拾うプレー。相手を背中で押さえる「ボックスアウト」で位置を取れるかどうかが勝負を分けます。</p>
+                </div>
+                <div class="skill">
+                    <h3>ディフェンス</h3>
+                    <p>膝を曲げて腰を落とし、両足を肩幅より広く。手より先に足を動かして、相手の進路の前に入り続けることが基本です。</p>
+                </div>
+                <div class="skill">
+                    <h3>フットワーク</h3>
+                    <p>ピボット（軸足を固定した方向転換）を覚えると、トラベリングを取られずにパスやシュートの角度を作れるようになります。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec04">
+            <div class="sec-head">
+                <span class="sec-num">04</span>
+                <h2>コートと用具</h2>
+                <p class="sec-en">Court &amp; Gear</p>
+            </div>
+
+            <p class="lead">正式なコートは意外とコンパクト。公園のハーフコートでも、基本の練習はひと通りできます。</p>
+
+            <figure>
+                <img src="img/court.jpg" alt="公園にある、ゴールが2つ設置された屋外のバスケットボールコート">
+                <figcaption>公園の屋外コート。正式な寸法より小さくても、基本の練習はひと通りできる。</figcaption>
+            </figure>
+
+            <h3>コートの寸法（FIBA規格）</h3>
+            <table class="spec">
+                <tbody>
+                    <tr><th>コートの広さ</th><td>28m × 15m</td></tr>
+                    <tr><th>リングの高さ</th><td>3.05m（床から）</td></tr>
+                    <tr><th>3ポイントライン</th><td>リング中心から6.75m</td></tr>
+                    <tr><th>フリースローライン</th><td>バックボードから5.80m</td></tr>
+                    <tr><th>リングの直径</th><td>45cm</td></tr>
+                </tbody>
+            </table>
+
+            <h3>ボールのサイズ</h3>
+            <p>年齢と性別でサイズが分かれています。自分に合わないボールだとシュートのフォームが崩れるので、最初の1球こそ慎重に選びたいところです。</p>
+            <table class="spec">
+                <tbody>
+                    <tr><th>7号球</th><td>一般・大学・高校の男子（周囲 約75cm／約600g）</td></tr>
+                    <tr><th>6号球</th><td>一般・大学・高校の女子（周囲 約72cm／約510g）</td></tr>
+                    <tr><th>5号球</th><td>ミニバス（小学生）（周囲 約69cm／約470g）</td></tr>
+                </tbody>
+            </table>
+
+            <h3>そろえたい道具</h3>
+            <p>最低限必要なのはボールとシューズだけ。シューズは足首を支えるハイカットで、靴底のグリップが残っているものを選んでください。体育館では屋内用、公園では屋外用と、ソールの硬さが違う点にも注意しましょう。</p>
+        </section>
+
+        <!--
+            写真クレジット（Wikimedia Commons / 自由ライセンス）
+            このページを公開する場合は、下記の表示が必要です。
+              hero.jpg, about.jpg … Michael Barera（CC BY-SA 4.0）
+              gear.jpg            … J.smith（CC BY-SA 4.0）
+              skill.jpg           … Master Sgt. Alexander Henninger, U.S. Army（Public domain）
+              court.jpg           … Mertbiol（CC0）
+        -->
+
+    </main>
+</div>
+</body>
+</html>

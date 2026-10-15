@@ -1,0 +1,560 @@
+@charset "utf-8";
+
+/* =========================================================
+   Basketball Guide — highlight menu
+   ========================================================= */
+
+/* padding や border を幅に含める（はみ出し防止） */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --navy:        #15172a;
+    --navy-light:  #222640;
+    --navy-line:   #343752;
+    --orange:      #e8622a;
+    --orange-lite: #ff8244;
+    --gold:        #ecc23d;
+    --cream:       #f7f3ec;
+    --paper:       #ffffff;
+    --ink:         #23263a;
+    --ink-soft:    #5b6076;
+    --sidebar-w:   260px;
+}
+
+body {
+    font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+                 "Yu Gothic", Meiryo, Arial, Helvetica, sans-serif;
+    background: var(--navy);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+}
+
+#wrapper {
+    width: 1100px;
+    max-width: 100%;
+    margin: 0 auto;
+    background: var(--cream);
+}
+
+/* ---------------------------------------------------------
+   Sidebar
+   --------------------------------------------------------- */
+header {
+    position: fixed;
+    top: 0;
+    width: var(--sidebar-w);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--navy);
+    border-right: 1px solid var(--navy-line);
+    z-index: 10;
+}
+
+header h1 {
+    padding: 38px 28px 30px;
+    font-family: Oswald, "Noto Sans JP", sans-serif;
+    line-height: 1;
+}
+
+.logo-mark {
+    display: block;
+    width: 38px;
+    height: 38px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background:
+        linear-gradient(to right, transparent 46%, var(--navy) 46%, var(--navy) 54%, transparent 54%),
+        linear-gradient(to bottom, transparent 46%, var(--navy) 46%, var(--navy) 54%, transparent 54%),
+        var(--orange);
+}
+
+.logo-text {
+    display: block;
+    color: var(--cream);
+    font-size: 2.1em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.logo-sub {
+    display: block;
+    margin-top: 10px;
+    color: var(--orange-lite);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 0.72em;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+}
+
+/* ---- nav ---- */
+nav {
+    flex: 1;
+    overflow-y: auto;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav li a {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 17px 28px;
+    color: #9fa4bd;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: color .25s, background-color .25s, border-color .25s;
+}
+
+nav li a .num {
+    font-family: Oswald, sans-serif;
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+    color: #5f6687;
+    transition: color .25s;
+}
+
+nav li a .label {
+    font-size: 0.95em;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+nav li a .label em {
+    display: block;
+    font-family: Oswald, sans-serif;
+    font-style: normal;
+    font-size: 0.72em;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #5f6687;
+    transition: color .25s;
+}
+
+nav li a:hover {
+    color: var(--cream);
+    background: var(--navy-light);
+}
+
+/* 現在地のハイライト */
+nav li.current a {
+    color: #fff;
+    background: var(--navy-light);
+    border-left-color: var(--orange);
+}
+
+nav li.current a .num,
+nav li.current a .label em {
+    color: var(--orange-lite);
+}
+
+/* ---------------------------------------------------------
+   Main
+   --------------------------------------------------------- */
+main {
+    display: block;
+    margin-left: var(--sidebar-w);
+    padding-bottom: 90px;
+    background: var(--cream);
+}
+
+/* ---- hero ---- */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--navy);
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    object-position: 50% 85%;
+    opacity: .5;
+}
+
+.hero-body {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 60px 56px 48px;
+    background: linear-gradient(to top, rgba(21, 23, 42, .95) 15%, rgba(21, 23, 42, 0));
+}
+
+.hero-eyebrow {
+    margin-bottom: 14px;
+    color: var(--orange-lite);
+    font-family: Oswald, sans-serif;
+    font-size: 0.8em;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    color: #fff;
+    font-family: Oswald, "Noto Sans JP", sans-serif;
+    font-size: 3.4em;
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: 0.02em;
+}
+
+.hero-lead {
+    max-width: 30em;
+    margin-top: 18px;
+    color: #c9cde0;
+    font-size: 0.92em;
+    line-height: 1.9;
+}
+
+/* ---- section ---- */
+section {
+    padding: 86px 56px 10px;
+    scroll-margin-top: 20px;
+}
+
+.sec-head {
+    position: relative;
+    margin-bottom: 34px;
+    padding-bottom: 22px;
+    border-bottom: 2px solid #e2dacd;
+}
+
+.sec-num {
+    display: block;
+    margin-bottom: 6px;
+    font-family: Oswald, sans-serif;
+    font-size: 0.9em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--orange);
+}
+
+section h2 {
+    font-family: Oswald, "Noto Sans JP", sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--ink);
+}
+
+.sec-en {
+    margin-top: 6px;
+    font-family: Oswald, sans-serif;
+    font-size: 0.78em;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #a09a8e;
+}
+
+section h3 {
+    margin: 42px 0 14px;
+    padding-left: 14px;
+    border-left: 4px solid var(--orange);
+    font-size: 1.15em;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--ink);
+}
+
+p {
+    margin-bottom: 22px;
+    line-height: 2.05;
+    color: var(--ink-soft);
+}
+
+p strong {
+    font-weight: 700;
+    color: var(--ink);
+    background: linear-gradient(transparent 62%, rgba(232, 98, 42, .22) 62%);
+}
+
+p.lead {
+    margin-bottom: 34px;
+    font-size: 1.08em;
+    font-weight: 500;
+    line-height: 1.95;
+    color: var(--ink);
+}
+
+/* ---- figure ---- */
+figure {
+    margin: 0 0 34px;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* 写真ごとに被写体の位置が違うので、切り抜きの基準点をずらす */
+#sec01 figure img { object-position: 50% 95%; }
+#sec02 figure img { object-position: 50% 55%; }
+#sec03 figure img { object-position: 50% 45%; }
+#sec04 figure img { object-position: 50% 45%; }
+
+figcaption {
+    margin-top: 10px;
+    padding-left: 12px;
+    border-left: 3px solid var(--gold);
+    font-size: 0.78em;
+    line-height: 1.7;
+    color: #8c8679;
+}
+
+/* ---- facts ---- */
+.facts {
+    display: flex;
+    gap: 14px;
+    margin: 34px 0 10px;
+    list-style: none;
+}
+
+.facts li {
+    flex: 1;
+    padding: 22px 18px;
+    background: var(--paper);
+    border-radius: 6px;
+    border-bottom: 3px solid var(--orange);
+    text-align: center;
+}
+
+.facts strong {
+    display: block;
+    font-family: Oswald, sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--orange);
+}
+
+.facts span {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.72em;
+    line-height: 1.6;
+    color: var(--ink-soft);
+}
+
+/* ---- rules ---- */
+.rules {
+    margin: 0 0 22px;
+    list-style: none;
+}
+
+.rules li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 13px 0;
+    border-bottom: 1px dashed #ded5c6;
+    line-height: 1.85;
+    color: var(--ink-soft);
+}
+
+.rules .tag {
+    flex: none;
+    min-width: 58px;
+    padding: 3px 0;
+    border-radius: 3px;
+    background: var(--navy);
+    color: var(--gold);
+    font-family: Oswald, sans-serif;
+    font-size: 0.82em;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+/* ---- skills ---- */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 34px;
+}
+
+.skill {
+    padding: 24px 24px 6px;
+    background: var(--paper);
+    border-radius: 6px;
+    border-top: 3px solid var(--gold);
+}
+
+.skill h3 {
+    margin: 0 0 10px;
+    padding-left: 0;
+    border-left: none;
+    font-size: 1.05em;
+    color: var(--orange);
+}
+
+.skill p {
+    margin-bottom: 18px;
+    font-size: 0.88em;
+    line-height: 1.95;
+}
+
+/* ---- spec table ---- */
+.spec {
+    width: 100%;
+    margin-bottom: 26px;
+    border-collapse: collapse;
+    background: var(--paper);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.spec th,
+.spec td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ece5d9;
+    font-size: 0.9em;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.spec th {
+    width: 36%;
+    background: #faf7f1;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.spec td {
+    color: var(--ink-soft);
+}
+
+.spec tr:last-child th,
+.spec tr:last-child td {
+    border-bottom: none;
+}
+
+/* ---------------------------------------------------------
+   Responsive
+   --------------------------------------------------------- */
+@media screen and (max-width: 900px) {
+
+    header {
+        position: sticky;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        padding: 0 4px;
+        border-right: none;
+        border-bottom: 1px solid var(--navy-line);
+    }
+
+    header h1 {
+        flex: none;
+        padding: 14px 16px;
+    }
+
+    .logo-mark {
+        width: 26px;
+        height: 26px;
+        margin-bottom: 8px;
+    }
+
+    .logo-text {
+        font-size: 1.15em;
+    }
+
+    .logo-text br {
+        display: none;
+    }
+
+    .logo-sub {
+        display: none;
+    }
+
+    nav {
+        overflow-x: auto;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li a {
+        display: block;
+        padding: 16px 16px;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        white-space: nowrap;
+    }
+
+    nav li a .num {
+        display: none;
+    }
+
+    nav li.current a {
+        border-left-color: transparent;
+        border-bottom-color: var(--orange);
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .hero img {
+        height: 300px;
+    }
+
+    .hero-body {
+        padding: 44px 24px 30px;
+    }
+
+    .hero-title {
+        font-size: 2.1em;
+    }
+
+    section {
+        padding: 56px 24px 10px;
+        scroll-margin-top: 76px;
+    }
+
+    section h2 {
+        font-size: 1.85em;
+    }
+
+    figure img {
+        height: 220px;
+    }
+
+    .facts {
+        flex-wrap: wrap;
+    }
+
+    .facts li {
+        flex: 1 1 100%;
+    }
+
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .spec th,
+    .spec td {
+        display: block;
+        width: auto;
+    }
+
+    .spec th {
+        border-bottom: none;
+        padding-bottom: 4px;
+    }
+}
